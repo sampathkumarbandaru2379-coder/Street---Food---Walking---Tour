@@ -1,0 +1,323 @@
+ * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f6f4ee;
+  color: #222624;
+  line-height: 1.5;
+}
+
+.container {
+  width: 92%;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* Header */
+.top-header {
+  background-color: #2d4a3e;
+  color: #f6f4ee;
+  padding: 26px 0;
+  border-bottom: 4px solid #d99b26;
+}
+
+.top-header h1 {
+  font-size: 1.65rem;
+  margin-bottom: 6px;
+}
+
+.top-header p {
+  font-size: 0.95rem;
+  color: #dce4df;
+}
+
+/* Controls Box */
+.controls-box {
+  background-color: #ffffff;
+  border: 1px solid #d8d4c8;
+  border-radius: 8px;
+  padding: 18px;
+  margin-top: 22px;
+}
+
+.control-row {
+  margin-bottom: 14px;
+}
+
+.control-split {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 14px;
+}
+
+.control-split .control-row {
+  margin-bottom: 0;
+}
+
+.control-row label {
+  display: block;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  color: #2d4a3e;
+}
+
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tab-btn,
+.filter-btn {
+  padding: 8px 14px;
+  border: 1px solid #bfc6c0;
+  background-color: #f6f4ee;
+  color: #222624;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.88rem;
+}
+
+.tab-btn:hover,
+.filter-btn:hover {
+  background-color: #e6ece8;
+}
+
+.tab-btn.active {
+  background-color: #2d4a3e;
+  color: #ffffff;
+  border-color: #2d4a3e;
+}
+
+.filter-btn.active {
+  background-color: #d99b26;
+  color: #1f1c14;
+  border-color: #c2881b;
+  font-weight: bold;
+}
+
+.search-box-wrap {
+  flex: 1;
+  min-width: 230px;
+}
+
+#searchInput {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #bfc6c0;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  background-color: #faf9f5;
+}
+
+#searchInput:focus {
+  outline: none;
+  border-color: #2d4a3e;
+  background-color: #ffffff;
+}
+
+/* Status Strip */
+.status-strip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e6ece8;
+  border: 1px solid #c9d4cd;
+  padding: 10px 16px;
+  border-radius: 6px;
+  margin-top: 16px;
+  font-size: 0.92rem;
+  font-weight: bold;
+}
+
+.stats-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.divider {
+  color: #8b9991;
+}
+
+#totalCost {
+  color: #2d4a3e;
+}
+
+.reset-btn {
+  padding: 5px 10px;
+  font-size: 0.82rem;
+  background-color: #ffffff;
+  border: 1px solid #9aa69f;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  background-color: #f0ece1;
+}
+
+/* Cards Layout */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.food-card {
+  background-color: #ffffff;
+  border: 1px solid #d8d4c8;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.food-card.checked {
+  background-color: #eef5f0;
+  border-color: #2d4a3e;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.card-header h3 {
+  font-size: 1.05rem;
+  color: #222624;
+}
+
+.since-tag {
+  background-color: #f4e6c3;
+  color: #6b4d0c;
+  font-size: 0.78rem;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.diet-badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.veg-badge {
+  background-color: #dff0e4;
+  color: #1f5e34;
+}
+
+.nonveg-badge {
+  background-color: #f7dfdf;
+  color: #8a2424;
+}
+
+.dish-info {
+  background-color: #f6f4ee;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.dish-info span {
+  display: block;
+  font-size: 0.78rem;
+  color: #5c635f;
+  margin-bottom: 2px;
+}
+
+.meta-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.meta-pill {
+  font-size: 0.76rem;
+  background-color: #eef0ed;
+  color: #424a45;
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 1px solid #d5dbd7;
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #e5e1d5;
+  padding-top: 10px;
+}
+
+.price-text {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #2d4a3e;
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+
+.check-item input {
+  width: 16px;
+  height: 16px;
+  accent-color: #2d4a3e;
+  cursor: pointer;
+}
+
+.empty-msg {
+  grid-column: 1 / -1;
+  background-color: #ffffff;
+  border: 1px dashed #bfc6c0;
+  padding: 24px;
+  text-align: center;
+  border-radius: 8px;
+  color: #5c635f;
+}
+
+/* Footer */
+.bottom-footer {
+  text-align: center;
+  padding: 24px 0;
+  margin-top: 32px;
+  font-size: 0.85rem;
+  color: #5c635f;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .top-header h1 {
+    font-size: 1.35rem;
+  }
+
+  .status-strip {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
