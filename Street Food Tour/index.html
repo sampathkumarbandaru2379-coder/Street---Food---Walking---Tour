@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>City Street Food & Culinary Walking Tour Guide</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="top-header">
+    <div class="container">
+      <h1>City Street Food &amp; Culinary Culture Walking Tour</h1>
+      <p>Explore local food trails, discover heritage street vendors, and track your tasting budget &amp; checklist.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Trail, Diet & Search Controls -->
+    <section class="controls-box">
+      <div class="control-row">
+        <label>Select Food Trail:</label>
+        <div class="btn-group" id="trailButtons">
+          <button class="tab-btn active" data-trail="breakfast">Old City Breakfast Trail</button>
+          <button class="tab-btn" data-trail="chaat">Evening Street Chaat Trail</button>
+          <button class="tab-btn" data-trail="sweets">Legendary Sweets &amp; Desserts Walk</button>
+        </div>
+      </div>
+
+      <div class="control-split">
+        <div class="control-row">
+          <label>Dietary Preference:</label>
+          <div class="btn-group" id="dietButtons">
+            <button class="filter-btn active" data-diet="all">All Dishes</button>
+            <button class="filter-btn" data-diet="veg">Pure Vegetarian</button>
+            <button class="filter-btn" data-diet="nonveg">Non-Veg Specialties</button>
+          </div>
+        </div>
+
+        <div class="control-row search-box-wrap">
+          <label for="searchInput">Search Vendor or Dish:</label>
+          <input type="text" id="searchInput" placeholder="e.g., Kachori, Kebab, Lassi...">
+        </div>
+      </div>
+    </section>
+
+    <!-- Checklist & Budget Counter -->
+    <section class="status-strip">
+      <div class="stats-group">
+        <span id="tastedCounter">Tasted: 0 / 0 stops</span>
+        <span class="divider">|</span>
+        <span id="totalCost">Total Spent: ₹0</span>
+      </div>
+      <button id="resetBtn" class="reset-btn">Reset Checklist</button>
+    </section>
+
+    <!-- Food Stop Cards -->
+    <section class="cards-container" id="foodCards"></section>
+  </main>
+
+  <footer class="bottom-footer">
+    <p>Street Food Walking Tour Guide &bull; Frontend Web Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
